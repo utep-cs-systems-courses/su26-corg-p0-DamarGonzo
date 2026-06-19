@@ -26,3 +26,23 @@ void print_triangle(int leftCol, int size)
   }
 }
 
+// Prints the arrow
+void print_arrow(int leftCol, int size)
+{
+  // Created the font Part of the arrow, which is honestly a triangle
+  for (int row = 0; row <= size; row++) {
+    int minCol = leftCol + size - row, maxCol = leftCol + size + row;
+    int col;
+    for (col = 0; col < minCol; col++) putchar(' ');
+    for (       ; col <= maxCol; col++) putchar('*');
+    putchar('\n');
+  }
+  // Created the end of the arrow.
+  for (int row = 0; row < size; row++) {
+    int col;
+    for (col = 0; col < leftCol + size; col++) putchar(' ');
+    putchar('*');
+    putchar('\n');
+  }
+}
+

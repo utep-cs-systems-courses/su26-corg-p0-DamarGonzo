@@ -14,7 +14,7 @@ void print_square(int leftCol, int size)
   }
 }
 
-// Prints a triangle of specified height whose left edge is at col leftCol.
+// Prints a triangle
 void print_triangle(int leftCol, int size)
 {
   for (int row = 0; row <= size; row++) {
